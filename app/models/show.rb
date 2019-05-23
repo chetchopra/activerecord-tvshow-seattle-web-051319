@@ -10,6 +10,7 @@ class Show < ActiveRecord::Base
   
   def self.lowest_rating
     self.find_by_rating(self.minimum(:rating))
+  end
   
     
   
