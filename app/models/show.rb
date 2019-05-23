@@ -1,27 +1,27 @@
 class Show < ActiveRecord::Base
   
   def self.highest_rating
-    self.maximum(:rating)
+    return self.maximum(:rating)
   end
   
   def self.most_popular_show
-    self.find_by_rating(self.highest_rating)
+    return self.find_by_rating(self.highest_rating)
   end
   
   def self.lowest_rating
-    self.minimum(:rating)
+    return self.minimum(:rating)
   end
   
   def self.least_popular_show
-    self.find_by_rating(self.lowest_rating)
+    return self.find_by_rating(self.lowest_rating)
   end
   
   def self.ratings_sum
-    self.sum(:rating)
+    return self.sum(:rating)
   end
   
   def self.popular_shows
-    self.where(rating: '> 5')
+    return self.where(rating: '> 5')
   end
     
   
