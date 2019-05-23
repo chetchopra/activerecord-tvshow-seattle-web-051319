@@ -16,6 +16,9 @@ class Show < ActiveRecord::Base
     self.find_by_rating(self.lowest_rating)
   end
   
+  def self.ratings_sum
+    
+  
     
   
   
